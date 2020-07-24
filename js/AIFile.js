@@ -28,7 +28,7 @@ function AIMode()
 	{
 		var sqr = document.getElementsByClassName("square");
 		sqr.item(px + py*size).setAttribute("player","1");
-		sqr.item(px + py*size).style.backgroundImage = "url('Images/Xpng.png')";
+		sqr.item(px + py*size).style.backgroundImage = "url('../Images/Xpng.png')";
 		l_played.push(px+py*size);
 	}
 	catch(e) {alert(e.message)}
@@ -40,6 +40,5 @@ function GetBoard()
 	var sqr = document.getElementsByClassName("square");
 	for (i = 0; i < size*size;i++)
 		TBoard.push(parseInt(sqr.item(i).getAttribute("player")));
-		
 	return TBoard;
 }

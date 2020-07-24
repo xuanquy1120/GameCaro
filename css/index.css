@@ -2,7 +2,7 @@
 
 #bgr
 {
-	background-image:url(./Images/109726384_284168269475416_4604596996815626525_n.jpg);
+	background-image:url(../Images/game.jpg);
 	background-repeat:space;
 	z-index:-900;
 }
@@ -34,7 +34,7 @@
 	height:100px;
 	margin:auto;
 	margin-top:5px;
-	background-image:url('./Images/Opng.png');
+	background-image:url('../Images/Opng.png');
 	background-repeat:round;
 	background-color:#CCC;
 }
