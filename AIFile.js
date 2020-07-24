@@ -43,5 +43,3 @@ function GetBoard()
 		
 	return TBoard;
 }
-
-
