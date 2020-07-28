@@ -29,7 +29,7 @@ function Loaded()
 		table.innerHTML += '<tr class="row"></tr>';
 		for (x = 0;x < size; x++)
 		{
-			var div = '<div class="square" onClick="Click(id)" onMouseOver="MouseOver(id)" onMouseOut="MouseOut(id)"></div>';
+			var div = '<div class="square" onClick="Click(id)" onMouseOver="MouseOver(id)" onMouseOut="MouseOut(id)" type="submit"></div>';
 			row.item(y).innerHTML += '<td class="col">' + div + '</td>';
 			square.item(x+y*size).setAttribute("id",(x+y*size).toString());
 			square.item(x+y*size).setAttribute("player","-1");
@@ -49,7 +49,12 @@ function Click(id)
 	square.item(pos).style.backgroundImage = path;
 	square.item(pos).setAttribute("player",CPlayer.toString());
 	l_played.push(pos);
-	
+	console.log(CPlayer)
+	console.log(pos)
+	const gameForm  = document.getElementById('game-form')
+	gameForm.addEventListener('click',(e)=>{
+		model.location(pos)
+	})
 	var win = WinGame();
 	var pwin = CPlayer;
 	
@@ -308,5 +313,5 @@ function LoadProgress()
 			alert(mess);
 			InGame = false;
 		}
-	},100);
+	},1000);
 }

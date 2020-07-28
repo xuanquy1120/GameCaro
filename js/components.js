@@ -53,26 +53,35 @@ components.loginScreen = `
         </div>
         <div class = "submit-wrapper">
             <div class = "account-exist">Don't have an account ? <span class = "cursor-pointer" id="redirect-to-register">Register</span></div>
-            <button class = "btn"z type="submit">Login</button>
+            <button class = "btn" type="submit">Login</button>
         </div>
        </div>
     </form>
-
-
 </div>
 </div>
-
 `
+
 components.menuScreen = `
-<div class = "menu-container">
-    <div class = "game-title"></div>
-    <div class = "game-selection"></div>
-    <div class = "add-game">
-        <div><span class = "cursor-pointer" id="redirect-to-game">NEW GAME</span></div>
+<div class="menu-container"> 
+
+    <div class="name-title">The Caro</div>
+    
+    <div class="room-list">
+        
     </div>
+    <div class="add-game">
+        
+        <button class="button" id="add-room" type="submit">CREATE NEW GAME</button>
+    </div>
+
 </div>
+
 `
-components.gameScreen=`
+
+components.gameScreen = `
+<div class="game-container">
+<form id="game-form">
+<div class="name-title">The Caro</div>
 <div id = "divmain">
 <table id="table">
 </table>
@@ -81,6 +90,11 @@ components.gameScreen=`
 <div id="label1"><b>CURENT PLAYER:</b></div>
 <div id="imgPlayer"></div>
 <br/>
+<progress id="pgrTime" max="100" value="100"></progress>
+<time></time>
+<br/>
 <input type="button" class="button" value="PLAYER VS PLAYER" onClick="PvsP()"/>
+</div>
+</form>  
 </div>
 `
